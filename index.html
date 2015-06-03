@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<SCRIPT language=JavaScript src="utf.js"></SCRIPT>
+		<SCRIPT language=JavaScript src="tamil.js"></SCRIPT>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('input,textarea').on('keydown',function(event){
+					if(event.which==121){
+						$(this).toggleClass('tamil');
+						return false;
+					}
+					if($(this).hasClass('tamil')){
+						toggleKBMode(event);
+					}else{
+						return true;
+					}
+				});
+				$('input,textarea').on('keypress',function(event){
+					if($(this).hasClass('tamil')){
+						convertThis(event);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form name="post" method="post">
+			<textarea name="comment" charset="utf-8"></textarea>
+		</form>
+
+		<form name="" action="" method="post">
+			<table>
+				<tbody>
+					<tr>
+						<td>Content</td>
+						<td><textarea name="content" class="tamil"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="submit" name="submit" value="submit"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</form>
+	</body>
+</html>
