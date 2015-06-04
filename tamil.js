@@ -2,7 +2,7 @@ var lang = "tamil";
 var chnbin = "\u0BCD";
 var ugar = "\u0BC1";
 var uugar = "\u0BC2";
-myimg.src = "/images/ucedit/"+lang+".png"
+myimg.src = "images/"+lang+".png"
 
 var tatw = new Array();
 tatw['\\!'] = "\u0BB8";
